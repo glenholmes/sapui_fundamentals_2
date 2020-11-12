@@ -10,15 +10,12 @@
 		data-sap-ui-resourceroots='{
 			"sap.ui.demo.nav": "./"
 		}'
-		data-sap-ui-compatVersion="edge" >
-	</script>
-	<script>
-		new sap.ui.core.ComponentContainer({
-			name: "sap.ui.demo.nav"
-		}).placeAt("content");
+		data-sap-ui-oninit="module:sap/ui/demo/nav/initMockServer"
+		data-sap-ui-compatVersion="edge"
+		data-sap-ui-async="true">
 	</script>
 </head>
-<body class="sapUiBody" role="application">
-	<div id="content"></div>
+<body class="sapUiBody">
+	<div data-sap-ui-component data-name="sap.ui.demo.nav" data-id="container" data-settings='{"id" : "nav"}'></div>
 </body>
 </html>

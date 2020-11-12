@@ -1,0 +1,12 @@
+{
+	"routes" : [{
+		"path": "/myodata",
+		"target" : {
+			"type" : "destination",
+			"name" : "Northwind"
+		},
+		"description" : "Northwind Odata services"
+	}],
+	"welcomeFile" : "/webapp/index.html",
+	"sendWelcomeFileRediect": true
+}
