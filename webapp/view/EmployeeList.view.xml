@@ -3,7 +3,8 @@
 		<content>
 			<List id="employeeList" headerText="{i18n>ListOfAllEmployees}" items="{/Employees}">
 				<items>
-					<StandardListItem title="{FirstName} {LastName}" type="Navigation" press=".onListItemPressed"/>
+					<!--<StandardListItem title="{FirstName} {LastName}" type="Navigation" press=".onListItemPressed"/>-->
+					<StandardListItem title="{FirstName} {LastName}" type="Active" press=".onListItemPressedDialog"/>
 				</items>
 			</List>
 		</content>
