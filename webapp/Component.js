@@ -7,6 +7,13 @@ sap.ui.define([
 
 		metadata: {
 			manifest: "json"
+		},
+
+		init: function () {
+
+			UIComponent.prototype.init.apply(this, arguments);
+
+			this.getRouter().initialize();
 		}
 
 	});

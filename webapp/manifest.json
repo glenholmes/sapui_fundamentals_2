@@ -21,7 +21,7 @@
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0",
-					"localUri" : "localService/metadata.xml"
+					"localUri": "localService/metadata.xml"
 				}
 			}
 		}
@@ -33,7 +33,7 @@
 			"tablet": true,
 			"phone": true
 		}
-  	},
+	},
 	"sap.ui5": {
 		"rootView": {
 			"viewName": "sap.ui.demo.nav.view.App",
@@ -61,6 +61,47 @@
 			},
 			"": {
 				"dataSource": "employeeRemote"
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "sap.ui.demo.nav.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"transition": "slide",
+				"bypassed": {
+					"target": "notFound"
+				},
+				"async": true
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "appHome",
+				"target": "home"
+			}, {
+				"pattern": "employees",
+				"name": "employeeList",
+				"target": "employees"
+			}],
+			"targets": {
+				"home": {
+					"viewId": "home",
+					"viewName": "Home",
+					"viewLevel": 1
+				},
+				"notFound": {
+					"viewId": "notFound",
+					"viewName": "NotFound",
+					"transition": "show"
+				},
+				"employees": {
+					"viewId": "employeeList",
+					"viewPath": "sap.ui.demo.nav.view",
+					"viewName": "EmployeeList",
+					"viewLevel": 2
+				}
 			}
 		}
 	}
